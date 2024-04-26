@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speedometer - Ácidez</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+
+    <main id="container">
+       
+        <section id="calculator">
+            <form id="form">
+                <h1 id="title">
+                    Volume(ton)
+                </h1>
+                <div class="input-box">
+                    <label for="volume_soja" style="color: whitesmoke";>
+                        Volume de soja padrão
+                    </label>
+                    <div class="input-field">
+                        <input type='number' id="volume_soja" required>
+                    </div>
+                    <div id="infos26" class="hidden">
+                        <div class="value-container">
+                            <span id="value" style="color: rgb(169, 199, 214);"></span>
+                          
+                        </div>
+                        <div class="value-container">
+                            <span id="value4" style="color: rgb(169, 199, 214);"></span>
+                          
+                        </div>
+                    </div>
+                </div>
+                <!-- div volume avariado até 12%-->
+                <div class="input-box">
+                    <label for="volume_avariado_12" style="color: whitesmoke";>
+                        Volume avariado até 12%
+                    </label>
+                    <div class="input-field">
+                        <input type='number' id="volume_avariado_12" required>
+                    </div>
+                    <div id="infos28" class="hidden">
+                        <div class="value-container">
+                            <span id="value1" style="color: rgb(169, 199, 214);"></span>
+                          
+                        </div>
+                        <div class="value-container">
+                            <span id="value5" style="color: rgb(169, 199, 214);"></span>
+                          
+                        </div>
+                    </div>
+                </div>
+                <!-- div volume avariado acima de 12% < 20%-->
+                <div class="input-box">
+                    <label for="volume_avariado_maior_12" style="color: whitesmoke";>
+                        Volume avariado acima de 12% &lt; 20%
+                    </label>
+                    <div class="input-field">
+                        <input type='number' id="volume_avariado_maior_12" required>
+                    </div>
+                     <div id="infos" class="hidden">
+                        <div class="value-container">
+                            <span id="value2" style="color: rgb(169, 199, 214);"></span>
+                        </div>
+                        <div class="value-container">
+                            <span id="value6" style="color: rgb(169, 199, 214);"></span>
+                          
+                        </div>
+                    </div>
+                </div>
+                    
+                </div>
+                <!-- div cargas pontuais-->
+                <div class="input-box">
+                    <label for="cargas_pontuais" style="color: whitesmoke";>Cargas pontuais negociação caso a caso</label>
+                    <div class="input-field">
+                      <input type="number" id="cargas_pontuais" required>
+                    </div>
+                    <div id="infos25" class="hidden">
+                    <div class="value-container">
+                        <span id="value3" style="color: rgb(169, 199, 214);"></span>
+                      
+                    </div>
+                    <div class="value-container">
+                        <span id="value7" style="color: rgb(169, 199, 214);"></span>
+                      
+                    </div>
+                    </div>
+                    
+                </div>
+                
+                <button id="calculate">
+                    
+                    Calcular
+                </button>
+
+                </div>
+            </form>
+           
+            </form>
+              
+
+            
+            
+        
+            
+           
+        <!--</section>
+        <section id="trem">
+            <form id="segundo">
+            <h1 id="title">
+                Volume(ton)
+            </h1>
+            <div id="infos" class="hidden">
+                <div id="result">
+                    <div id="bmi">
+                        <span id="value"></span>
+                    </div>
+                    
+                </div>
+    
+            </div>
+        </form>
+       
+        </section>-->
+
+    </main>
+    <script src="script.js"></script> 
+    <div class="speedometer-containner">
+        
+        <div class="speedometer-container">
+            <div class="speedometer-text">
+            <div class="static">Acidez</div>
+            <div class="dynamic">
+            <span class="km">0</span>
+            </div>
+            </div>
+    
+        <div class="center_point"></div>
+        <div class="speedometer_center_hide"></div>
+        <div class="speedometer_BOTTOM_hide"></div>
+        <div class="arrow-container">
+            <div class="arrow_wrapper speed-0">
+                <div class="arrow"></div>
+            </div>
+        </div>
+        <div class="speedometer_scale-1"></div>
+        <div class="speedometer_scale speedometer_scale-1"></div>
+        <div class="speedometer_scale speedometer_scale-2"></div>
+        <div class="speedometer_scale speedometer_scale-3"></div>
+        <div class="speedometer_scale speedometer_scale-4"></div>
+        <div class="speedometer_scale speedometer_scale-5"></div>
+        <div class="speedometer_scale speedometer_scale-6"></div>
+        <div class="speedometer_scale speedometer_scale-7"></div>
+        <div class="speedometer_scale speedometer_scale-8"></div>
+        <div class="speedometer_scale speedometer_scale-9"></div>
+        <div class="speedometer_scale speedometer_scale-10"></div>
+        <div class="speedometer_scale speedometer_scale-11"></div>
+        <div class="speedometer_scale speedometer_scale-12"></div>
+        <div class="speedometer_scale speedometer_scale-13"></div>
+        <div class="speedometer_scale speedometer_scale-14"></div>
+        <div class="speedometer_scale speedometer_scale-15"></div>
+        <div class="speedometer_scale speedometer_scale-16"></div>
+        <div class="speedometer_scale speedometer_scale-17"></div>
+        <div class="speedometer_scale speedometer_scale-18"></div>
+        <div class="speedometer_scale speedometer_scale-19"></div>
+        <div class="speedometer_scale speedometer_scale-20"></div>
+    </div>
+   <div class="LISTA">
+    <label> "lista"</label>
+    <div>
+        <ol>
+            <li>
+                item 1
+            </li>
+            <li>
+                item2
+
+            </li>
+            <li>
+                item3
+            </li>
+        </ol>
+    </div>
+    <button class="fab">
+        +
+    </button>
+   </div> 
+   
+
+    <script src="script.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-auth-compat.js"></script>
+<script>
+    const firebaseConfig = {
+    apiKey: "AIzaSyAq4QcPgpqlGcxt79YvVV26VnU8yDH5dcE",
+    authDomain: "calculadora-acidez.firebaseapp.com",
+    projectId: "calculadora-acidez",
+    storageBucket: "calculadora-acidez.appspot.com",
+    messagingSenderId: "516838927707",
+    appId: "1:516838927707:web:d2701b45428a1d2df27e7e",
+    measurementId: "G-KFFMCFXQGW"
+  };
+  firebase.initializeApp(firebaseConfig);
+  firebase.auth().signInWithEmailAndPassword("narciso.ermita.oliveira@gmail.com","123456").then(response => {
+    console.log('success',response)
+  }).catch(error=>{
+    console.log('error',error)
+  });
+</script>
+
+<style>
+    body {
+        width: 80%;
+        margin: 0;
+    }
+</style>
+
+     
+</body>
+</html>
+
