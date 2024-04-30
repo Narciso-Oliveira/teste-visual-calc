@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speedometer - Ácidez</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+
+    <main id="container">
+       
+        <section id="calculator">
+            <form id="form">
+                <h1 id="title">
+                    Volume(ton)
+                </h1>
+                <div class="input-box">
+                    <label for="volume_soja" style="color: whitesmoke";>
+                        Volume de soja padrão
+                    </label>
+                    <div class="input-field">
+                        <input type='number' id="volume_soja" required>
+                    </div>
+                    <div id="infos26" class="hidden">
+                        <div class="value-container">
+                            <span id="value" style="color: rgb(169, 199, 214);"></span>
+                          
+                        </div>
+                        <div class="value-container">
+                            <span id="value4" style="color: rgb(169, 199, 214);"></span>
+                          
+                        </div>
+                    </div>
+                </div>
+                <!-- div volume avariado até 12%-->
+                <div class="input-box">
+                    <label for="volume_avariado_12" style="color: whitesmoke";>
+                        Volume avariado até 12%
+                    </label>
+                    <div class="input-field">
+                        <input type='number' id="volume_avariado_12" required>
+                    </div>
+                    <div id="infos28" class="hidden">
+                        <div class="value-container">
+                            <span id="value1" style="color: rgb(169, 199, 214);"></span>
+                          
+                        </div>
+                        <div class="value-container">
+                            <span id="value5" style="color: rgb(169, 199, 214);"></span>
+                          
+                        </div>
+                    </div>
+                </div>
+                <!-- div volume avariado acima de 12% < 20%-->
+                <div class="input-box">
+                    <label for="volume_avariado_maior_12" style="color: whitesmoke";>
+                        Volume avariado acima de 12% &lt; 20%
+                    </label>
+                    <div class="input-field">
+                        <input type='number' id="volume_avariado_maior_12" required>
+                    </div>
+                     <div id="infos" class="hidden">
+                        <div class="value-container">
+                            <span id="value2" style="color: rgb(169, 199, 214);"></span>
+                        </div>
+                        <div class="value-container">
+                            <span id="value6" style="color: rgb(169, 199, 214);"></span>
+                          
+                        </div>
+                    </div>
+                </div>
+                    
+                </div>
+                <!-- div cargas pontuais-->
+                <div class="input-box">
+                    <label for="cargas_pontuais" style="color: whitesmoke";>Cargas pontuais negociação caso a caso</label>
+                    <div class="input-field">
+                      <input type="number" id="cargas_pontuais" required>
+                    </div>
+                    <div id="infos25" class="hidden">
+                    <div class="value-container">
+                        <span id="value3" style="color: rgb(169, 199, 214);"></span>
+                      
+                    </div>
+                    <div class="value-container">
+                        <span id="value7" style="color: rgb(169, 199, 214);"></span>
+                      
+                    </div>
+                    </div>
+                    
+                </div>
+                <!-- preço da soja -->
+                <div class="input-box">
+                    <label for="preco_soja" style="color: whitesmoke";>
+                        Preço atual da soja
+                    </label>
+                    <div class="input-field">
+                        <input type='number' id="preco_soja" required>
+                    </div>
+                </div>
+                <button id="calculate">
+                    
+                    Calcular
+                </button>
+
+                </div>
+            </form>
+           
+            </form>
+              
+
+            
+            
+        
+            
+           
+        <!--</section>
+        <section id="trem">
+            <form id="segundo">
+            <h1 id="title">
+                Volume(ton)
+            </h1>
+            <div id="infos" class="hidden">
+                <div id="result">
+                    <div id="bmi">
+                        <span id="value"></span>
+                    </div>
+                    
+                </div>
+    
+            </div>
+        </form>
+       
+        </section>-->
+
+    </main>
+    <script src="script.js"></script> 
+    <div class="speedometer-containner">
+        
+        <div class="speedometer-container">
+            <div class="speedometer-text">
+            <div class="static">Acidez</div>
+            <div class="dynamic">
+            <span class="km">0</span>
+            </div>
+            </div>
+    
+        <div class="center_point"></div>
+        <div class="speedometer_center_hide"></div>
+        <div class="speedometer_BOTTOM_hide"></div>
+        <div class="arrow-container">
+            <div class="arrow_wrapper speed-0">
+                <div class="arrow"></div>
+            </div>
+        </div>
+        <div class="speedometer_scale-1"></div>
+        <div class="speedometer_scale speedometer_scale-1"></div>
+        <div class="speedometer_scale speedometer_scale-2"></div>
+        <div class="speedometer_scale speedometer_scale-3"></div>
+        <div class="speedometer_scale speedometer_scale-4"></div>
+        <div class="speedometer_scale speedometer_scale-5"></div>
+        <div class="speedometer_scale speedometer_scale-6"></div>
+        <div class="speedometer_scale speedometer_scale-7"></div>
+        <div class="speedometer_scale speedometer_scale-8"></div>
+        <div class="speedometer_scale speedometer_scale-9"></div>
+        <div class="speedometer_scale speedometer_scale-10"></div>
+        <div class="speedometer_scale speedometer_scale-11"></div>
+        <div class="speedometer_scale speedometer_scale-12"></div>
+        <div class="speedometer_scale speedometer_scale-13"></div>
+        <div class="speedometer_scale speedometer_scale-14"></div>
+        <div class="speedometer_scale speedometer_scale-15"></div>
+        <div class="speedometer_scale speedometer_scale-16"></div>
+        <div class="speedometer_scale speedometer_scale-17"></div>
+        <div class="speedometer_scale speedometer_scale-18"></div>
+        <div class="speedometer_scale speedometer_scale-19"></div>
+        <div class="speedometer_scale speedometer_scale-20"></div>
+    </div>
+
+   <!--<div class="LISTA">
+    <label> "lista"</label>
+    <div>
+        <ol id="infos">
+            <li>Volume Soja: <span id="value">{{ v1 }}</span> ({{ percen_v_s }}%)</li>
+            <li>Volume Avariado 12: <span id="value1">{{ v2 }}</span> ({{ percen_v_a12 }}%)</li>
+            <li>Volume Avariado Maior 12: <span id="value2">{{ v3 }}</span> ({{ percen_v_am12 }}%)</li>
+            <li>Cargas Pontuais: <span id="value3">{{ v4 }}</span> ({{ percen_c_p }}%)</li>
+            <li>Acidez: <span id="value4">{{ acidez }}</span></li>
+            <li>Caminhões Padrão: <span id="value5">{{ camdia_padrao }}</span></li>
+            <li>Caminhões Avariado: <span id="value6">{{ camdia_avariado }}</span></li>
+            <li>Caminhões Avariado Maior: <span id="value7">{{ camdia_avariado_maior }}</span></li>
+            <li>Caminhões Cargas Pontuais: <span id="value8">{{ camdia_cargas_pontuais }}</span></li>
+          </ol>
+    </div>
+    <button class="fab" id="plus">
+        +
+    </button>-->
+    <!--<div class="LISTA">
+        <h1>Dados de Volume de Soja</h1>
+        <div id="dataDisplay"></div>
+      </div>-->
+    
+    
+    
+  
+  </div> 
+<button id="adicionar">
+   adicionar
+</button>
+<button id="somar">
+    somar
+ </button>
+    
+   
+
+    <script src="script.js"></script>
+<!--<script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-auth-compat.js"></script>
+<script>
+    const firebaseConfig = {
+    apiKey: "AIzaSyAq4QcPgpqlGcxt79YvVV26VnU8yDH5dcE",
+    authDomain: "calculadora-acidez.firebaseapp.com",
+    projectId: "calculadora-acidez",
+    storageBucket: "calculadora-acidez.appspot.com",
+    messagingSenderId: "516838927707",
+    appId: "1:516838927707:web:d2701b45428a1d2df27e7e",
+    measurementId: "G-KFFMCFXQGW"
+  };
+  firebase.initializeApp(firebaseConfig);
+  firebase.auth().signInWithEmailAndPassword("narciso.ermita.oliveira@gmail.com","123456").then(response => {
+    console.log('success',response)
+  }).catch(error=>{
+    console.log('error',error)
+  });
+</script>
+-->
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAq4QcPgpqlGcxt79YvVV26VnU8yDH5dcE",
+      authDomain: "calculadora-acidez.firebaseapp.com",
+      projectId: "calculadora-acidez",
+      storageBucket: "calculadora-acidez.appspot.com",
+      messagingSenderId: "516838927707",
+      appId: "1:516838927707:web:d2701b45428a1d2df27e7e",
+      measurementId: "G-KFFMCFXQGW"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    import {getDatabase, get, ref, child, set, onValue, update, remove,push} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
+    const db = getDatabase();
+    let volume_soja = document.getElementById('volume_soja');
+    let volume_avariado_12 = document.getElementById('volume_avariado_12');
+    let volume_avariado_maior_12 = document.getElementById('volume_avariado_maior_12');
+    let cargas_pontuais = document.getElementById('cargas_pontuais');
+
+  
+
+
+    function AddData() {
+        if(!volume_soja.value||!volume_avariado_12.value||!volume_avariado_maior_12.value||!cargas_pontuais.value){
+            alert('Por favor, preencha os campos');
+            return;
+        }
+  const newDataRef = push(ref(db, 'volume_soja'));
+  set(newDataRef,{
+
+      volume1: volume_soja.value,
+      volume2: volume_avariado_12.value,
+      volume3: volume_avariado_maior_12.value,
+      volume4: cargas_pontuais.value,
+    
+
+    }).then(() => {
+        alert('Dados inseridos com sucesso');
+      })
+      .catch(() => {
+        alert('Erro ao inserir dados');
+      })
+      .catch((error) => {
+        alert('Erro ao inserir dados');
+        console.log(error);
+      });
+  }
+
+  /*função de soma */
+  function somarVolume2() {
+  const volume2Ref = ref(db, 'volume_soja');
+  let soma = 0;
+
+  get(volume2Ref).then((snapshot) => {
+    if (snapshot.exists()) {
+      snapshot.forEach((childSnapshot) => {
+        const volume2 = childSnapshot.child('volumesoja/volume2').val();
+        soma += Number(volume2);
+      });
+      alert('A soma de todos os volume2 é: ' + soma);
+    } else {
+      alert('Não foram encontrados registros');
+    }
+  }).catch((error) => {
+    console.error('Erro ao obter os dados: ', error);
+    alert('Erro ao obter os dados');
+  });
+}
+
+
+    function RetData(){
+        const dbRef = ref(db);
+        get(child(dbRef,'volume_soja')).then((snapshot)=>{
+            if(snapshot.exists()){
+                volume_soja.value = snapshot.val().volumesoja.volume1
+                volume_avariado_12.value = snapshot.val().volumesoja.volume2
+                volume_avariado_maior_12.value = snapshot.val().volumesoja.volume3
+                cargas_pontuais.value = snapshot.val().volumesoja.volume4
+
+            }
+            else{
+                alert('Dados não encontrados');
+            }
+        }).catch((error)=>{
+            alert('Erro ao inserir dados');
+            console.log(error);
+        })
+    }
+function UpdateData(){
+        update(ref(db,'volume_soja'),volume_soja.value,{
+            volume1: volume_soja.value, volume2: volume_avariado_12,
+            volume3: volume_avariado_maior_12, volume4: cargas_pontuais
+            
+
+        }).then(()=>{
+            alert('Dados atualizados com sucesso')
+        }).catch(()=>{
+            alert('Erro ao inserir dados')
+        }).catch((error)=>{
+            alert('Erro ao inserir dados');
+            console.log(error);
+        })
+    }
+
+    function DeleteData(){
+        remove(ref(db,'volume_soja')).then(()=>{
+            alert('Dados deletados com sucesso')
+        }).catch(()=>{
+            alert('Erro ao inserir dados')
+        }).catch((error)=>{
+            alert('Erro ao inserir dados');
+            console.log(error);
+        })
+    }
+   // Função para exibir os dados do volume de soja em uma lista ordenada
+
+
+
+
+
+    adicionar.addEventListener('click', AddData);
+    somar.addEventListener('click', AddData);
+var sdtNo=0;    
+var tbody=document.getElementById('tbody1')
+function AddItemtoTable(volume1,volume2,volume3,volume4){
+    let trow= document.createElement("tr");
+    let td1 =document.createElement("td");
+    let td2 =document.createElement("td");
+    let td3 =document.createElement("td");
+    let td4 =document.createElement("td");
+
+
+    td1.innerHTML=volume1;
+    td2.innerHTML=volume2;
+    td3.innerHTML=volume3;
+    td4.innerHTML=volume4;
+
+    trow.appendChild(td1);
+    trow.appendChild(td2);
+    trow.appendChild(td3);
+    trow.appendChild(td4);
+
+    tbody.appendChild(trow);
+
+}
+function AddItemtoAllTable(qualquercoisa){
+   sdtNo=0
+   tbody.innerHTML="";
+   qualquercoisa.forEach(element=>{
+    AddItemtoTable(element.volume1,element.volume2,element.volume3,element.volume4);
+   })
+}
+
+function GetAllDataOnce(){
+    const dbRef=ref(db);
+    get(child(dbRef,"volume_soja")).then((snapshot)=>{
+        var data=[];
+        snapshot.forEach(childSnapshot => {
+            data.push(childSnapshot.val());
+        });
+        data.forEach(element => {
+            AddItemtoTable(element.volume1, element.volume2, element.volume3, element.volume4);
+        });
+    });
+}
+
+function updateTable(data) {
+    sdtNo = 0;
+    tbody.innerHTML = "";
+    data.forEach(element => {
+        AddItemtoTable(element.volume1, element.volume2, element.volume3, element.volume4);
+    });
+}
+
+function GetAllDatarealtime(){
+    const dbRef=ref(db, "volume_soja");
+    onValue(dbRef,snapshot=>{
+        var data=[];
+        snapshot.forEach(childSnapshot => {
+            data.push(childSnapshot.val());
+        });
+        updateTable(data);
+    })
+}
+
+
+
+window.onload = GetAllDatarealtime;
+
+
+</script>
+<div class="cutia mt-3" style="max-height: 600px; overflow-y: auto;">
+    <table class="table table-dark">
+        <thead>
+        <tr style="position: sticky; top: 0; background-color: #343a40;">
+        <th>Vol. soja padr.</th>
+        <th>Avariado até 12% </th>
+        <th>Avariado entre 12% e 20%</th>
+        <th>Cargas pontuais</th>
+        <th>Preço da soja</th>
+        <th>Acidez</th>
+        <th>Desconto</th>
+        </tr>
+        </thead>
+      <tbody id="tbody1"></tbody>
+    </table>
+</div>
+
+
+
+
+
+<style>
+    body {
+        width: 80%;
+        margin: 0;
+    }
+</style>
+
+     
+</body>
+</html>
+

@@ -1,0 +1,811 @@
+@media screen {
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200&display=swap');
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.speedometer-containner{
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    margin-top : -307px;
+    margin-left : -335px;
+    width : 299px;
+    max-width : 299px;
+    height : 296px;
+    max-height : 296px;
+    background-image : linear-gradient(90deg, rgb(26, 115, 232,0.5), rgb(81, 45, 168,0.8) 50%);
+    
+}
+ .center_point{
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 137px;
+    left: 137px;
+    z-index: 10;
+
+ }
+
+ .speedometer_scale{
+
+    width: 8px;
+    height: 280px;
+    background-color: rgb(166, 235, 6);
+    position: absolute;
+    left: 143PX;
+    top: 7px;
+ }
+ .speedometer_scale-1{
+
+    width: 8px;
+    height: 140px;
+    background-color: rgb(235, 6, 6);
+    position: absolute;
+    left: 72PX;
+    top: 77px;
+    transform: rotate(-90deg);
+    z-index: 8;
+ }
+
+
+ 
+ .speedometer_scale-1{
+    transform: rotate(-90deg);
+    background-color: rgb(6, 235, 6);
+ }
+ .speedometer_scale-2{
+    transform: rotate(-80deg);
+    background-color: rgb(26, 235, 6);
+ }
+ .speedometer_scale-3{
+    transform: rotate(-70deg);
+    background-color: rgb(36, 235, 6);
+
+ }
+ .speedometer_scale-4{
+    transform: rotate(-60deg);
+    background-color: rgb(46, 235, 6);
+ }
+ .speedometer_scale-5{
+    transform: rotate(-50deg);
+    background-color: rgb(66, 235, 6);
+ }
+ .speedometer_scale-6{
+    transform: rotate(-40deg);
+    background-color: rgb(86, 235, 6);
+ }
+ .speedometer_scale-7{
+    transform: rotate(-30deg);
+    background-color: rgb(106, 235, 6);
+ }
+ .speedometer_scale-8{
+    transform: rotate(-20deg);
+    background-color: rgb(126, 235, 6);
+    
+ }
+ .speedometer_scale-9{
+    transform: rotate(-10Deg);
+    background-color: rgb(136, 235, 6);
+ }
+ .speedometer_scale-10{
+    transform: rotate(0deg);
+    background-color: rgb(166, 235, 6);
+ }
+ .speedometer_scale-11{
+    transform: rotate(10deg);
+    background-color: rgb(186, 235, 6);
+ }
+ .speedometer_scale-12{
+    transform: rotate(20deg);
+    background-color: rgb(206, 235, 6);
+ }
+ .speedometer_scale-13{
+    transform: rotate(30deg);
+    background-color: rgb(236, 213, 6);
+ }
+ .speedometer_scale-14{
+    transform: rotate(40deg);
+    background-color: rgb(266, 235, 6);
+ }
+ .speedometer_scale-15{
+    transform: rotate(50deg);
+    background-color: rgb(286, 235, 6);
+ }
+ .speedometer_scale-16{
+    transform: rotate(60deg);
+    background-color: rgb(286, 235, 6);
+ }
+ .speedometer_scale-17{
+    transform: rotate(70deg);
+    background-color: rgb(236, 121, 6);
+ }
+ .speedometer_scale-18{
+    transform: rotate(80deg);
+    background-color: rgb(236, 63, 6);
+ }
+ .speedometer_scale-19{
+    transform: rotate(90deg);
+    background-color: rgb(236, 6, 6);
+ }
+ .speedometer_scale_1{
+    transform: rotate(-180deg);
+    background-color: rgb(236, 6, 6);
+ }
+
+
+ .speedometer_center_hide{
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    z-index: 9;
+
+
+
+
+
+ }
+ .speedometer_BOTTOM_hide{
+    width: 320px;
+    height: 250PX;
+    background-color: white;
+    position: absolute;
+    z-index: 11;
+    top: 160px;
+    left: -14px;
+    border-top: 1px solid;
+ }
+
+ .arrow-container{
+    width: 160px;
+    height: 160px;
+    background-color: transparent;
+    position: absolute;
+    z-index: 12;
+    top: 67px;
+    left: 67px;
+
+ }
+
+ .arrow_wrapper{
+    width: 160px;
+    height: 160px;
+    background-color: transparent;
+    position: relative;
+    transition:  all 0.4s;
+ }
+ 
+ .arrow{
+
+    width: 110px;
+    height: 4px;
+    background-color: purple;
+    position: relative;
+    top: 78px;
+    left: -30px;
+
+
+
+ }
+
+ .speed-0{
+    transform: rotate(0deg);
+    
+ }
+
+ .speed-10{
+    transform: rotate(10deg);
+ }
+
+ .speed-20{
+    transform: rotate(20deg);
+ }
+
+ .speed-30{
+    transform: rotate(30deg);
+ }
+
+ .speed-40{
+    transform: rotate(40deg);
+ }
+
+ .speed-50{
+    transform: rotate(50deg);
+ }
+
+ .speed-60{
+    transform: rotate(60deg);
+ }
+
+ .speed-70{
+    transform: rotate(70deg);
+ }
+
+ .speed-80{
+    transform: rotate(80deg);
+ }
+
+ .speed-90{
+    transform: rotate(90deg);
+ }
+
+ .speed-100{
+    transform: rotate(100deg);
+ }
+
+ .speed-110{
+    transform: rotate(110deg);
+ }
+
+ .speed-120{
+    transform: rotate(120deg);
+ }
+
+ .speed-130{
+    transform: rotate(130deg);
+ }
+
+ .speed-140{
+    transform: rotate(140deg);
+ }
+
+ .speed-150{
+    transform: rotate(150deg);
+ }
+
+ .speed-160{
+    transform: rotate(160deg);
+ }
+ .speed-170{
+    transform: rotate(170deg);
+ }
+
+ .speed-180{
+    transform: rotate(180deg);
+ }
+
+ .container{
+    left: 170px;
+    position: relative;
+ }
+
+ /*aqui começa o style da calculadora */
+
+
+
+*{
+  
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100vh ;
+    zoom: 0.8;
+}
+
+#container{
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+    background-color: rgb(136, 136, 136);
+    margin-top : 237px;
+    z-index: 20;
+    width : 357px;
+    max-width : 357px;
+    padding-top : 0px;
+
+}
+
+#calculator {
+    justify-content: center;
+    display: block;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    color: black;
+    border-radius: 8px;
+    background-color: rgba(84, 84, 84, 0.662);
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+    width : 356px;
+    max-width : 356px;
+    padding-top : 0px;
+    padding-left : 91px;
+    margin-top : 22px; 
+
+
+}
+
+#speedometer-containner > body:nth-child(3) > div:nth-child(3) {
+   background-image : linear-gradient(90deg, rgb(26, 115, 232), rgb(81, 45, 168) 50%);
+   margin-top : -307px;
+   margin-left : -335px;
+   width : 299px;
+   max-width : 299px;
+   height : 296px;
+   max-height : 296px;
+}
+
+.LISTA {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   max-width: 600px;
+   margin: 0 auto;
+   padding: 20px;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   background-color: #f9f9f9;
+   margin-left: 800px;
+ }
+ 
+ .LISTA label {
+   font-size: 1.2em;
+   font-weight: bold;
+   margin-bottom: 10px;
+ }
+ 
+ .LISTA ol {
+   counter-reset: item;
+   list-style: none;
+   padding: 0;
+   margin: 0;
+ }
+ 
+ .LISTA ol li {
+   counter-increment: item;
+   padding: 10px;
+   border-bottom: 1px solid #ddd;
+ }
+ 
+ .LISTA ol li:before {
+   content: counter(item) ". ";
+   margin-left: -15px;
+   width: 15px;
+   color: #666;
+   display: inline-block;
+   font-weight: bold;
+   font-size: 0.8em;
+ }
+ 
+ .LISTA ol li:last-child {
+   border-bottom: none;
+ }
+ 
+ .LISTA .fab {
+   position: absolute;
+   bottom: 20px;
+   right: 20px;
+   background-color: #4CAF50;
+   color: white;
+   border: none;
+   border-radius: 50%;
+   width: 50px;
+   height: 50px;
+   font-size: 2em;
+   cursor: pointer;
+ }
+
+ 
+   
+#form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size : 14px;
+    width : 322px;
+    max-width : 322px;
+    height : 408px;
+    max-height : 408px;
+    margin-left : -81px;
+
+
+    
+}
+
+#form > div:nth-child(5) {
+   height : 110px;
+   max-height : 110px;
+   width : 370px;
+   max-width : 370px;
+   margin-top : -11px;
+   }
+
+#form > div:nth-child(4) {
+   height : 60px;
+   max-height : 60px;
+   margin-top : -25px;
+   width : 323px;
+   max-width : 323px;
+}
+#form > div:nth-child(3) {
+   height : 75px;
+   max-height : 75px;
+   margin-top : -22px;
+}
+
+#form > div:nth-child(2) {
+   height : 72px;
+   max-height : 72px;
+}
+
+#value {
+   margin-left : 124px;
+   width : 166px;
+   max-width : 166px;
+   margin-top : -39px;
+   font-weight : 400;
+   text-decoration-line : none;
+   font-style : italic;
+   color : rgb(169, 199, 214);
+}
+#infos26 > div:nth-child(1) {
+   margin-left : 41px;
+}
+#infos25 {
+   height : 34px;
+   max-height : 34px;
+}
+#volume_soja {
+   width : 150px;
+   max-width : 150px;
+   }
+   #form > div:nth-child(2) > div:nth-child(2) {
+   width : 158px;
+   max-width : 158px;
+   }
+   #value4 {
+   margin-left : 166px;
+   width : 190px;
+   max-width : 190px;
+   margin-top : -6px;
+   font-style : italic;
+   color : rgb(169, 199, 214);
+   }
+   #infos26 > div:nth-child(2) {
+   width : 320px;
+   max-width : 320px;
+   }
+   #form > div:nth-child(3) > div:nth-child(2) {
+   width : 157px;
+   max-width : 157px;
+   }
+   #value1 {
+   margin-top : -39px;
+   margin-left : 166px;
+   font-style : italic;
+   color : rgb(169, 199, 214);
+   }
+   #value5 {
+   margin-left : 166px;
+   height : 16px;
+   max-height : 16px;
+   width : 221px;
+   max-width : 221px;
+   margin-top : -3px;
+   font-style : italic;
+   color : rgb(169, 199, 214);
+   }
+   #form > div:nth-child(4) > div:nth-child(2) {
+   width : 158px;
+   max-width : 158px;
+   }
+   #value2 {
+   margin-left : 166px;
+   margin-top : -39px;
+   font-style : italic;
+   color : rgb(169, 199, 214);
+   }
+   #value6 {
+   margin-left : 165px;
+   width : 176px;
+   max-width : 176px;
+   margin-top : -4px;
+   font-style : italic;
+   color : rgb(169, 199, 214);
+   }
+   /**/
+   #cargas_pontuais {
+      margin-top : -1px;
+      }
+      #form > div:nth-child(5) > div:nth-child(2) {
+      width : 159px;
+      max-width : 159px;
+      }
+      #value3 {
+      margin-left : 166px;
+      margin-top : -39px;
+      font-style : italic;
+      color : rgb(169, 199, 214);
+      }
+      #value7 {
+      margin-left : 166px;
+      margin-top : -4px;
+      font-style : italic;
+      color : rgb(169, 199, 214);
+      }
+      #container {
+      margin-top : 237px;
+      width : 357px;
+      max-width : 357px;
+      padding-top : 0px;
+      }
+      html > body:nth-child(3) > div:nth-child(3) > div:nth-child(1) > div:nth-child(4) {
+         margin-top : 0px;
+         height : 137px;
+         max-height : 137px;
+         width : 329px;
+         max-width : 329px;
+         box-shadow : rgb(0, 0, 0) 0px 0px 0px inset;
+         color : rgb(0, 0, 0);
+         background-color : rgb(255, 255, 255);
+         border-top-color : rgb(0, 0, 0);
+         border-right-color : rgb(0, 0, 0);
+         border-bottom-color : rgb(0, 0, 0);
+         border-left-color : rgb(0, 0, 0);
+         }
+
+
+#segundo{
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+   height: 100vh
+   
+}
+
+
+#title{
+font-size:  2.25rem;
+position: relative;
+
+
+}
+#title::after{
+
+    position: absolute;
+    content: "";
+    background-color: #16a34a;
+    width: 8rem;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    border: radius 3px; ;
+    }
+
+.input-box label{
+ font-size: 1.1rem;
+ color: rgb(23, 21, 21);
+ font-weight: 500;
+
+}
+
+.input-field{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: #3f3f46;
+    padding: 0.3rem;
+    border-radius: 3px;
+    margin-top: 3px;
+}
+
+.input-field input{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 500;
+
+}
+.input-field input::-webkit-outer-spin-button,
+.input-field input::-webkit-inner-spin-button{
+    appearance: none;
+}
+
+#calculate  {
+    border: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #f8fafc;
+    background-color: #16a34a;
+    padding: 0.85rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#INNFOS {
+   justify-content: center;
+   flex-direction: column;
+   gap: 5rem;
+   padding: 1rem;
+   color: black;
+   border-radius: 8px;
+   background-color: rgba(84, 84, 84, 0.662);
+   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+   height: 100vh;
+
+
+}
+
+
+
+#result2{
+   display: flex;
+   gap: 10rem;
+   align-items: center;
+   padding: 0.75rem;
+
+}
+
+#acidez2{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   font-size: 2.25rem;
+   gap: 5rem;
+}
+
+#infos2{
+   display: flex;
+   flex-direction: column;
+   gap:1.4rem;
+
+
+}
+
+#infos3{
+   display: flex;
+   flex-direction: column;
+   gap: 1.9rem;
+
+
+}
+
+#title2{
+   font-size:  1rem;
+   position: relative;
+}
+
+#infos2 spam:last-child{
+   font-size: 2rem;
+
+}
+
+.hidden{
+   display: none;
+}
+
+#result{
+   display: flex;
+   gap: 2rem;
+   align-items: center;
+   border-top: 1px solid;
+   padding: 0.75rem 0;
+}
+#bmi{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   font-size: 2.25rem;
+   gap: 5rem;
+}
+
+.bmi span:last-child{
+   font-size: 0.875ren;
+   
+
+
+}
+#test{
+   display: flex;
+   flex-direction: column;
+   gap:1.4rem;
+
+
+}
+.input-field span:last-child{
+   font-size: 0.875ren;
+   
+
+
+}
+.input-box span {
+   display: block;
+   margin-top: 5px;
+   font-size: 14px;
+ }
+
+
+ .input-box .value-container {
+   margin-top: 5px;
+   font-size: 14px;
+ }
+ 
+ .input-box .value-container span {
+   display: flex;
+ }
+ .speedometer-text{
+   width: 180px;
+   position: absolute;
+   z-index: 20;
+   left: 58px;
+   top: 60px;
+   text-align: center;
+   font-weight: bold;
+
+
+
+ }
+ .static{
+   font-size: 18px;
+ }
+
+ .dinamic{
+   margin-top: 10px;
+
+ }
+
+#adicionar{
+   margin-top: 250px;
+}
+
+#somar{
+   margin-top: 250px;
+   margin-left: 30px;
+}
+
+.LISTA {
+   max-width: 800px;
+   margin: 50px auto;
+   padding: 20px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   margin-left: 800px;
+ }
+ 
+ h1 {
+   text-align: center;
+ }
+ 
+ .data-item {
+   margin-bottom: 10px;
+ }
+ 
+ .data-label {
+   font-weight: bold;
+ }
+ 
+ .data-value {
+   margin-left: 10px;
+ }
+ 
+
+
+
+
+ 
